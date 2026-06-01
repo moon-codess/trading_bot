@@ -1,0 +1,15 @@
+2026-06-01 20:20:03 | DEBUG    | logging_config:33 | Logger ready. Writing to: logs\trading_bot_20260601.log
+2026-06-01 20:20:03 | INFO     | orders:30 | Placing MARKET BUY — symbol=BTCUSDT qty=0.01
+2026-06-01 20:20:03 | DEBUG    | client:51 | → POST https://testnet.binancefuture.com/fapi/v1/order  params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01, 'timestamp': 1780325403591}
+2026-06-01 20:20:05 | DEBUG    | client:63 | ← HTTP 200  body={"orderId":13704863991,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"zkJdapaBU7cQ4qyO5atX5Y","price":"0.00","avgPrice":"0.00","origQty":"0.0100","executedQty":"0.0000","cumQty":"0.0000","cumQuote":"0.000000","timeInForce":"GTC","type":"MARKET","reduceOnly":false,"closePosition":false,"side":"BUY","positionSide":"BOTH","stopPrice":"0.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"MARKET","priceMatch":"NONE","selfTradePreventionMode":"EXPIRE_MAKER","goodTillDate":0,"updateTime":1780325404941}
+2026-06-01 20:20:05 | INFO     | orders:36 | MARKET order done — orderId=13704863991 status=NEW executedQty=0.0000 avgPrice=0.00
+2026-06-01 20:21:26 | DEBUG    | logging_config:33 | Logger ready. Writing to: logs\trading_bot_20260601.log
+2026-06-01 20:21:26 | INFO     | orders:45 | Placing LIMIT SELL — symbol=BTCUSDT qty=0.01 price=120000.0
+2026-06-01 20:21:26 | DEBUG    | client:51 | → POST https://testnet.binancefuture.com/fapi/v1/order  params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.01, 'price': 120000.0, 'timeInForce': 'GTC', 'timestamp': 1780325486361}
+2026-06-01 20:21:27 | DEBUG    | client:63 | ← HTTP 200  body={"orderId":13704955839,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"cUMwZmlO3mLXPUGMvBKWd8","price":"120000.00","avgPrice":"0.00","origQty":"0.0100","executedQty":"0.0000","cumQty":"0.0000","cumQuote":"0.000000","timeInForce":"GTC","type":"LIMIT","reduceOnly":false,"closePosition":false,"side":"SELL","positionSide":"BOTH","stopPrice":"0.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"LIMIT","priceMatch":"NONE","selfTradePreventionMode":"EXPIRE_MAKER","goodTillDate":0,"updateTime":1780325487400}
+2026-06-01 20:21:27 | INFO     | orders:54 | LIMIT order done — orderId=13704955839 status=NEW
+2026-06-01 20:21:35 | DEBUG    | logging_config:33 | Logger ready. Writing to: logs\trading_bot_20260601.log
+2026-06-01 20:21:35 | INFO     | orders:62 | Placing STOP_MARKET SELL — symbol=BTCUSDT qty=0.01 stopPrice=50000.0
+2026-06-01 20:21:35 | DEBUG    | client:51 | → POST https://testnet.binancefuture.com/fapi/v1/order  params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'STOP_MARKET', 'quantity': 0.01, 'stopPrice': 50000.0, 'timestamp': 1780325495139}
+2026-06-01 20:21:35 | DEBUG    | client:63 | ← HTTP 400  body={"code":-4120,"msg":"Order type not supported for this endpoint. Please use the Algo Order API endpoints instead."}
+2026-06-01 20:21:35 | ERROR    | client:73 | API error — code=-4120 msg=Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.
